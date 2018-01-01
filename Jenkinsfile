@@ -32,7 +32,7 @@ throttle(['throttleDocker']) {
           sh '''
             version=$(date +%Y%m%d%H%M)
             ./cd/publish.sh alpha dtr.caleb.boxboat.net $version
-            export DOCKER_HOST="tcp://10.180.252.116:2375"
+            export DOCKER_HOST="tcp://192.168.1.101:2375"
             ./cd/deploy-swarm.sh alpha dtr.caleb.boxboat.net $version
           '''
         }
